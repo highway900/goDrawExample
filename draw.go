@@ -1,11 +1,11 @@
 package main
 
 import (
-    "os"
     "fmt"
     "image"
-    "image/png"
     "image/color"
+    "image/png"
+    "os"
 )
 
 func main() {
@@ -19,7 +19,7 @@ func main() {
     for i := 0; i < x; i++ {
         for j := 0; j < y; j++ {
             v := color.Black
-            if i % 2 == 1 && j % 2 == 1 {
+            if i%2 == 1 && j%2 == 1 {
                 v = color.White
             }
             img.Set(i, j, v)
@@ -31,8 +31,8 @@ func main() {
 
     outputFile, err := os.Create(output)
     if err != nil {
-            fmt.Println("ERROR: Can't create ouput file.")
-            os.Exit(1)
+        fmt.Println("ERROR: Can't create ouput file.")
+        os.Exit(1)
     }
 
     if err = png.Encode(outputFile, img); err != nil {
