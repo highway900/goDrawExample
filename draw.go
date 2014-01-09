@@ -13,8 +13,8 @@ func main() {
     // Allocate Image Buffer Memory
     x := 32
     y := 32
-        canvasSize := image.Rect(0, 0, x, y)
-        img := image.NewRGBA(canvasSize)
+    canvasSize := image.Rect(0, 0, x, y)
+    img := image.NewRGBA(canvasSize)
 
     for i := 0; i < x; i++ {
         for j := 0; j < y; j++ {
